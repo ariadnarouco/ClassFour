@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Object class</title>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			var person = {
+                firstName : "aria",
+                lastName : "rou",
+                age : 4,
+                id : "1234567",
+                address : "Calle falsa 1234, Buenos Aires, Argentina",
+                isStudent : true,
+                favMovies : ["Toy story 1","Toy story 2","Toy story 3"],
+                
+                
+                
+                
+                
+                
+                //functions
+                getOlder : function(){
+                  this.age= this.age +1;
+                  console.log("Congrats! You are " + this.age+ " now. Enjoy being older");
+                },
+                sayHi : function(){
+                  console.log("Hi you!");
+                },
+                areYouStudent : function(){
+                  return this.isStudent ? "I am a student and I have no money": "No, I want to keep my money :)";
+                },
+                
+                getPersonSummay : function(){
+                  return "This is " + this.firstName + " " + this.lastName + ". Recently turned "+ this.age + " and lives in " + this.address + " and enjoys watching " + this.favMovies;
+                }
+                
+                
+            };
+
+
+			//Play
+			person.getOlder();
+			person.sayHi();
+			person.areYouStudent();
+
+			// for ( var movie in person.favMovies){
+			//   console.log(person.favMovies[movie]); 
+			// }
+
+			// var i= 0;
+			// while(  person.favMovies[i] !== "Toy story 3"){
+			//   console.log("I'm still in the while and I just read " + person.favMovies[i]);
+			//   i++;
+			// }
+
+
+			console.log(person.getPersonSummay());
+
+			
+
+		</script>
+	</body>
+</html>
